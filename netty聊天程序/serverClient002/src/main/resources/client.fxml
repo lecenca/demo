@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClientController">
+    <children>
+        <Label layoutX="39.0" layoutY="37.0" prefHeight="19.0" prefWidth="33.0" text="IP" />
+        <Label layoutX="39.0" layoutY="63.0" prefHeight="19.0" prefWidth="33.0" text="PORT" />
+        <TextField fx:id="ipField" editable="false" layoutX="83.0" layoutY="35.0" prefHeight="23.0" prefWidth="128.0" />
+        <TextField fx:id="portField" editable="false" layoutX="83.0" layoutY="61.0" prefHeight="23.0" prefWidth="128.0" />
+        <TextArea fx:id="messageBox" editable="false" layoutX="292.0" layoutY="35.0" prefHeight="344.0" prefWidth="291.0" />
+        <TableView fx:id="clientList" editable="true" layoutX="39.0" layoutY="98.0" prefHeight="165.0" prefWidth="235.0">
+            <columns>
+                <TableColumn fx:id="sendColumn" prefWidth="48.0" sortable="false" text="发送" />
+                <TableColumn fx:id="clientColumn" editable="false" prefWidth="186.0" text="客户端" />
+            </columns>
+        </TableView>
+        <TextArea fx:id="chatBox" layoutX="39.0" layoutY="278.0" prefHeight="66.0" prefWidth="235.0" />
+        <Button layoutX="38.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#send" prefHeight="23.0" prefWidth="235.0" text="发送" />
+    </children>
+</AnchorPane>
+
